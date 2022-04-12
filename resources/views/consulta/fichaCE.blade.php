@@ -7,7 +7,11 @@ active bg-gradient-warning
 <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
 
 
-
+    <div class="container mt-2 text-center ">
+        <h2 class="mb-4">
+            Curso Especial
+        </h2>
+    </div>
 
 
     <main class="container mt-8 min-vh-100 py-4">
@@ -19,7 +23,7 @@ active bg-gradient-warning
                             <div class="card my-4">
                                 <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                                     <div class="bg-gradient-warning shadow-primary border-radius-lg pt-4 pb-3">
-                                        <h6 class="text-white text-capitalize ps-3"> Fichas desertadas por Curso Especial
+                                        <h6 class="text-white text-capitalize ps-3"> Fichas desertadas
                                         </h6>
 
 
@@ -40,6 +44,12 @@ active bg-gradient-warning
                                                 <a class="nav-link text-dark btn">
                                                     <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                                         Total Desertados
+                                                    </button>
+                                                </a>
+                                                <br>
+                                                <a class="nav-link text-dark btn" href="{{ route('file-export-ReportCE') }}">
+                                                    <button type="button" href="{{ route('file-export-ReportCE') }}" class="btn btn-block btn-warning">
+                                                        Exportar documento
                                                     </button>
                                                 </a>
                                             </div>
@@ -84,6 +94,10 @@ active bg-gradient-warning
                                                                 Total Inscritos  </th>
                                                                 <th class="text-center text-uppercase text-primary text-xxs font-weight-bolder opacity-7">
                                                                  Total Activos  </th>
+                                                                 <th class="text-center text-uppercase text-primary text-xxs font-weight-bolder opacity-7">
+                                                                    Fecha Inicio </th>  </th>
+                                                                    <th class="text-center text-uppercase text-primary text-xxs font-weight-bolder opacity-7">
+                                                                     Fecha Fin  </th>
 
 
                                                     </tr>
@@ -116,7 +130,13 @@ active bg-gradient-warning
                                                         <td class="align-middle text-center">
                                                             {{ $ce->total_act }}
                                                         </td>
-                                                        
+                                                        <td class="align-middle text-center">
+                                                            {{ $ce->fecha_in  }}
+                                                        </td>
+                                                        <td class="align-middle text-center">
+                                                            {{ $ce->fecha_fin }}
+                                                        </td>
+
 
 
                                                     </tr>
@@ -138,7 +158,7 @@ active bg-gradient-warning
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    
+
                     <h5 class="modal-title" id="staticBackdropLabel">Desertados por Coordinación <br> Cursos Especiales</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>

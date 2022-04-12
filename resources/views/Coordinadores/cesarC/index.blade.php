@@ -9,6 +9,12 @@
 <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <div class="container mt-8 min-vh-100 py-4">
 
+        <div class="container mt-2 text-center ">
+            <h2 class="mb-4">
+                Coordinador CESAR AUGUSTO VELEZ BETANCOURT
+            </h2>
+        </div>
+
         <div class="container">
             <div class="row justify-content-center">
                 <div class="row">
@@ -16,7 +22,7 @@
                         <div class="card my-4">
                             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                                 <div class="bg-gradient-warning shadow-primary border-radius-lg pt-4 pb-3">
-                                    <h6 class="text-white text-capitalize ps-3">Fichas</h6>
+                                    <h6 class="text-white text-capitalize ps-3">Fichas general</h6>
 
                                 </div>
                             </div>

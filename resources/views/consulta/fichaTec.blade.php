@@ -42,7 +42,14 @@ active bg-gradient-warning
                                                         Total Desertados
                                                     </button>
                                                 </a>
-                                            </div>
+                                                <br>
+                                                <a class="nav-link text-dark btn" href="{{ route('file-export-ReportTec') }}">
+                                                    <button type="button" href="{{ route('file-export-ReportTec') }}" class="btn btn-block btn-warning">
+                                                        Exportar documento
+                                                    </button>
+                                                </a>
+                                                
+                                              
                                         </div>
                                     </div>
 
@@ -83,6 +90,10 @@ active bg-gradient-warning
                                                             Total Inscritos  </th>
                                                             <th class="text-center text-uppercase text-primary text-xxs font-weight-bolder opacity-7">
                                                              Total Activos  </th>
+                                                             <th class="text-center text-uppercase text-primary text-xxs font-weight-bolder opacity-7">
+                                                                Fecha inicio </th>
+                                                                <th class="text-center text-uppercase text-primary text-xxs font-weight-bolder opacity-7">
+                                                                 Fecha fin  </th>
 
 
                                                     </tr>
@@ -111,6 +122,12 @@ active bg-gradient-warning
                                                         </td>
                                                         <td class="align-middle text-center">
                                                             {{ $tes->total_act }}
+                                                        </td>
+                                                        <td class="align-middle text-center">
+                                                            {{ $tes->fecha_in }}
+                                                        </td>
+                                                        <td class="align-middle text-center">
+                                                            {{ $tes->fecha_fin }}
                                                         </td>
                                                     </tr>
                                                     @endforeach

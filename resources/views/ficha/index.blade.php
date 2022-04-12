@@ -9,6 +9,7 @@
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
         <div class="container mt-8 min-vh-100 py-4">
 
+
             <div class="container mt-2 text-center ">
                 <h2 class="mb-4">
                     Agregar Documento
@@ -45,18 +46,7 @@
                                         <table class="table align-items-center mb-0">
                                             <form class="form-inline my-2 my-lg-0 float-right">
                                                 <div class="col-xl-12">
-                                                    <div class="dropdown">
-                                                        <button class="btn btn-warning dropdown-toggle" type="button" id="dropdown1" data-toggle="dropdown">
-                                                          Nivel
-                                                        </button>
-                                                        <div class="dropdown-menu">
-                                                          <a class="dropdown-item" href="{{ route('nivelTec') }}">Tecnico</a>
-                                                          <a class="dropdown-item" href="{{ route('nivelTecn') }}">Tecnologo</a>
-                                                          <a class="dropdown-item" href="{{ route('nivelCE') }}">Curso Especial</a>
-                                                          <a class="dropdown-item" href="{{ route('nivelEs') }}">Especialización Tecnologica</a>
-                                                          <a class="dropdown-item" href="{{ route('nivelEvento') }}">Evento</a>
-                                                        </div>
-                                                      </div>
+
                                                     <div class="ms-md-auto pe-md-3 d-flex align-items-center">
                                                         <div class="input-group input-group-outline">
                                                             <label class="form-label"></label>

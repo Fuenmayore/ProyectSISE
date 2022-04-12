@@ -12,6 +12,11 @@ use App\Exports\FichaTecExport;
 use App\Exports\FichaTecnExport;
 use App\Exports\FichaEsExport;
 use App\Exports\FichaEvExport;
+use App\Exports\ReportTecExport;
+use App\Exports\ReportTecnExport;
+use App\Exports\ReportCEExport;
+use App\Exports\ReportESExport;
+use App\Exports\ReportEVExport;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\DB;
 
@@ -155,4 +160,28 @@ class FichaController extends Controller
     {
         return Excel::download(new FichaEvExport, 'fichaEv-collection.xlsx');
     }
+
+    /* Exportar de Reporte-Ficha con desercion */
+    public function fileExportReportTec()
+    {
+        return Excel::download(new ReportTecExport, 'ReportTec-collection.xlsx');
+    }
+    public function fileExportReportTecn()
+    {
+        return Excel::download(new ReportTecnExport, 'ReportTecn-collection.xlsx');
+    }
+    public function fileExportReportCE()
+    {
+        return Excel::download(new ReportCEExport, 'ReportCE-collection.xlsx');
+    }
+    public function fileExportReportES()
+    {
+        return Excel::download(new ReportESExport, 'ReportES-collection.xlsx');
+    }
+    public function fileExportReportEV()
+    {
+        return Excel::download(new ReportEVExport, 'ReportEV-collection.xlsx');
+    }
+   
+   
 }

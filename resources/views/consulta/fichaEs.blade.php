@@ -39,7 +39,13 @@ active bg-gradient-warning
                                                 <!-- Button trigger modal -->
                                                 <a class="nav-link text-dark btn">
                                                     <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                        Total Desertados Especialización Tecnologica
+                                                        Total Desertados 
+                                                    </button>
+                                                </a>
+                                                <br>
+                                                <a class="nav-link text-dark btn" href="{{ route('file-export-ReportES') }}">
+                                                    <button type="button" href="{{ route('file-export-ReportES') }}" class="btn btn-block btn-warning">
+                                                        Exportar documento
                                                     </button>
                                                 </a>
                                             </div>
@@ -81,6 +87,10 @@ active bg-gradient-warning
                                                                 Total Inscritos</th>
                                                             <th class="text-center text-uppercase text-primary text-xxs font-weight-bolder opacity-7">
                                                                 Total Activos</th>
+                                                                <th class="text-center text-uppercase text-primary text-xxs font-weight-bolder opacity-7">
+                                                                    Fecha Inicio</th>
+                                                                <th class="text-center text-uppercase text-primary text-xxs font-weight-bolder opacity-7">
+                                                                   Fecha Fin</th>
 
 
                                                     </tr>
@@ -109,6 +119,12 @@ active bg-gradient-warning
                                                         </td>
                                                         <td class="align-middle text-center">
                                                             {{ $es->total_act }}
+                                                        </td>
+                                                        <td class="align-middle text-center">
+                                                            {{ $es->fecha_in }}
+                                                        </td>
+                                                        <td class="align-middle text-center">
+                                                            {{ $es->fecha_fin }}
                                                         </td>
 
 

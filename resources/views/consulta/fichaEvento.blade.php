@@ -42,6 +42,11 @@ active bg-gradient-warning
                                                         Total Desertados
                                                     </button>
                                                 </a>
+                                                <a class="nav-link text-dark btn" href="{{ route('file-export-ReportEV') }}">
+                                                    <button type="button" href="{{ route('file-export-ReportEV') }}" class="btn btn-block btn-warning">
+                                                        Exportar documento
+                                                    </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -83,6 +88,10 @@ active bg-gradient-warning
                                                                 Total Inscritos</th>
                                                             <th class="text-center text-uppercase text-primary text-xxs font-weight-bolder opacity-7">
                                                                 Total Activos</th>
+                                                                <th class="text-center text-uppercase text-primary text-xxs font-weight-bolder opacity-7">
+                                                                   Fecha Inicio</th>
+                                                                <th class="text-center text-uppercase text-primary text-xxs font-weight-bolder opacity-7">
+                                                                    Fecha Fin</th>
 
 
                                                     </tr>
@@ -112,6 +121,13 @@ active bg-gradient-warning
                                                         <td class="align-middle text-center">
                                                             {{ $ev->total_act }}
                                                         </td>
+                                                        <td class="align-middle text-center">
+                                                            {{ $ev->fecha_in }}
+                                                        </td>
+                                                        <td class="align-middle text-center">
+                                                            {{ $ev->fecha_fin }}
+                                                        </td>
+
 
                                                     </tr>
                                                     @endforeach

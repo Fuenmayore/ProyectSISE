@@ -42,6 +42,12 @@ active bg-gradient-warning
                                                         Total Desertados
                                                     </button>
                                                 </a>
+                                                <br>
+                                                <a class="nav-link text-dark btn" href="{{ route('file-export-ReportTecn') }}">
+                                                    <button type="button" href="{{ route('file-export-ReportTecn') }}" class="btn btn-block btn-warning">
+                                                        Exportar documento
+                                                    </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -83,6 +89,10 @@ active bg-gradient-warning
                                                                 Total Inscritos  </th>
                                                                 <th class="text-center text-uppercase text-primary text-xxs font-weight-bolder opacity-7">
                                                                  Total Activos  </th>
+                                                                 <th class="text-center text-uppercase text-primary text-xxs font-weight-bolder opacity-7">
+                                                                    Fecha Inicio </th>
+                                                                    <th class="text-center text-uppercase text-primary text-xxs font-weight-bolder opacity-7">
+                                                                    Fecha Fin  </th>
 
 
                                                     </tr>
@@ -111,6 +121,12 @@ active bg-gradient-warning
                                                         </td>
                                                         <td class="align-middle text-center">
                                                             {{ $tecn->total_act }}
+                                                        </td>
+                                                        <td class="align-middle text-center">
+                                                            {{ $tecn->fecha_in  }}
+                                                        </td>
+                                                        <td class="align-middle text-center">
+                                                            {{ $tecn->fecha_fin }}
                                                         </td>
 
 

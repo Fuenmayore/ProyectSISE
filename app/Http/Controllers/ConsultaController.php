@@ -39,8 +39,8 @@ class ConsultaController extends Controller
         ->orderByDesc('registro_coordinacion')
         ->get();
 
-        $request->user()->authorizeRoles([ 'admin']);  
-    
+        $request->user()->authorizeRoles([ 'admin']);
+
 
         return view('consulta.index', compact('fichas', 'apre', 'act', 'datos', 'porcentajed', 'porcentajer', 'retirados', 'desercion', 'retencion'));
     }
@@ -72,7 +72,7 @@ class ConsultaController extends Controller
        ->groupBy('id_coor')
        ->orderByDesc('registro_coordinacion')
        ->get();
-       $request->user()->authorizeRoles([ 'admin']);  
+       $request->user()->authorizeRoles([ 'admin']);
        return view('consulta.modal', compact('buscarporid', 'fichs', 'datos'));
     }
     public function BI(Request $request) {
@@ -378,7 +378,7 @@ class ConsultaController extends Controller
 
 
 
-        $reporteTec = Ficha::selectRaw('id_coor, (SUM(total_apre) - sum(total_act)) AS registro_coordinacion, SUM(total_act) AS suma_total_act, round((sum(total_act)  / sum(total_apre))*100) AS totald, round(100-((sum(total_act) * 100) / sum(total_apre))) AS totalr'  )
+        $reporteTec = Ficha::selectRaw(' id_coor,  (SUM(total_apre) - sum(total_act)) AS registro_coordinacion, SUM(total_act) AS suma_total_act, round((sum(total_act)  / sum(total_apre))*100) AS totald, round(100-((sum(total_act) * 100) / sum(total_apre))) AS totalr'  )
         ->where('nivel', 'tecnico')
         ->groupBy('id_coor')
         ->orderByDesc('registro_coordinacion')
@@ -391,7 +391,7 @@ class ConsultaController extends Controller
     public function fichaCE(Request $request) {
 
         $buscarporCE=$request->get('buscarporCE');
-        $ces = Ficha::selectRaw('id, id_coor, nivel,  total_apre, total_act,(total_apre - total_act) as desertados, (((total_act * 100) / (total_apre))) AS totalRetencion, (100-((total_act * 100) / total_apre)) AS totalDersercion' )
+        $ces = Ficha::selectRaw('id, id_coor, nivel,  total_apre, total_act, fecha_in,fecha_fin, (total_apre - total_act) as desertados, (((total_act * 100) / (total_apre))) AS totalRetencion, (100-((total_act * 100) / total_apre)) AS totalDersercion' )
         ->where('nivel', 'curso especial')
         ->having('desertados', '>=', 1)
         ->orderByDesc('desertados')
@@ -411,7 +411,7 @@ class ConsultaController extends Controller
         $buscarporTec=$request->get('buscarporTec');
 
 
-        $tec =Ficha::selectRaw('id, id_coor, nivel, total_apre, total_act, (total_apre - total_act) as desertados, (total_apre - total_act) as desertados, (round((total_act * 100) / (total_apre))) AS totalRetencion, round(100-((total_act * 100) / total_apre)) AS totalDersercion')
+        $tec =Ficha::selectRaw('id, id_coor, nivel, total_apre, total_act, fecha_in, fecha_fin,(total_apre - total_act) as desertados, (total_apre - total_act) as desertados, (round((total_act * 100) / (total_apre))) AS totalRetencion, round(100-((total_act * 100) / total_apre)) AS totalDersercion')
         ->where('nivel', 'tecnico')
         ->having('desertados', '>=', 1)
         ->orderByDesc('desertados')
@@ -429,7 +429,7 @@ class ConsultaController extends Controller
     public function fichaEs(Request $request) {
 
         $buscarporEs=$request->get('buscarporEs');
-        $ess = Ficha::selectRaw('id, id_coor, nivel, total_apre , total_act, (total_apre - total_act) as desertados, (total_apre - total_act) as desertados, (round((total_act * 100) / (total_apre))) AS totalRetencion, round(100-((total_act * 100) / total_apre)) AS totalDersercion')
+        $ess = Ficha::selectRaw('id, id_coor, nivel, total_apre , total_act,fecha_in, fecha_fin,(total_apre - total_act) as desertados, (total_apre - total_act) as desertados, (round((total_act * 100) / (total_apre))) AS totalRetencion, round(100-((total_act * 100) / total_apre)) AS totalDersercion')
         ->where('nivel', 'ESPECIALIZACIÓN TECNOLÓGICA')
         ->having('desertados', '>=', 1)
         ->orderByDesc('desertados')
@@ -446,7 +446,7 @@ class ConsultaController extends Controller
     public function fichaEvento(Request $request) {
 
         $buscarporEv=$request->get('buscarporEv');
-        $evs = Ficha::selectRaw('id, id_coor, nivel, total_apre, total_act, (total_apre - total_act) as desertados, (total_apre - total_act) as desertados, (round((total_act * 100) / (total_apre))) AS totalRetencion, round(100-((total_act * 100) / total_apre)) AS totalDersercion')
+        $evs = Ficha::selectRaw('id, id_coor, nivel, total_apre, total_act, fecha_in,fecha_fin, (total_apre - total_act) as desertados, (total_apre - total_act) as desertados, (round((total_act * 100) / (total_apre))) AS totalRetencion, round(100-((total_act * 100) / total_apre)) AS totalDersercion')
         ->where('nivel', 'evento')
         ->having('desertados', '>=', 1)
         ->orderByDesc('desertados')
@@ -463,7 +463,7 @@ class ConsultaController extends Controller
     public function fichaTecn(Request $request) {
 
         $buscarporTecn=$request->get('buscarporTecn');
-        $tecns = Ficha::selectRaw('id, id_coor, nivel, total_apre, total_act, (total_apre - total_act) as desertados, (total_apre - total_act) as desertados, (round((total_act * 100) / (total_apre))) AS totalRetencion, round(100-((total_act * 100) / total_apre)) AS totalDersercion')
+        $tecns = Ficha::selectRaw('id, id_coor, nivel, total_apre, total_act, fecha_in, fecha_fin,  (total_apre - total_act) as desertados, (total_apre - total_act) as desertados, (round((total_act * 100) / (total_apre))) AS totalRetencion, round(100-((total_act * 100) / total_apre)) AS totalDersercion')
         ->where('nivel', 'tecnologo')
         ->having('desertados', '>=', 1)
         ->orderByDesc('desertados')

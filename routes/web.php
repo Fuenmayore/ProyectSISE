@@ -51,30 +51,36 @@ Route::get('nivelCE', [ConsultaController::class,'nivelCE'])->name('nivelCE');
 Route::get('fichaCE', [ConsultaController::class,'fichaCE'])->name('fichaCE');
 Route::get('reporteCE', [ConsultaController::class,'reporteCE'])->name('reporteCE');
 Route::get('file-export-fichaCE', [FichaController::class, 'fileExportCE'])->name('file-export-fichaCE');
+Route::get('file-export-ReportCE', [FichaController::class, 'fileExportReportCE'])->name('file-export-ReportCE');
 
 /* Tecnico */
 Route::get('nivelTec', [ConsultaController::class,'nivelTec'])->name('nivelTec');
 Route::get('fichaTec', [ConsultaController::class,'fichaTec'])->name('fichaTec');
 Route::get('reporteTec', [ConsultaController::class,'reporteTec'])->name('reporteTec');
 Route::get('file-export-fichaTec', [FichaController::class, 'fileExportTec'])->name('file-export-fichaTec');
+Route::get('file-export-ReportTec', [FichaController::class, 'fileExportReportTec'])->name('file-export-ReportTec');
+
 
 /* Tecnologo */
 Route::get('nivelTecn', [ConsultaController::class,'nivelTecn'])->name('nivelTecn');
 Route::get('reporteTecn', [ConsultaController::class,'reporteTecn'])->name('reporteTecn');
 Route::get('fichaTecn', [ConsultaController::class,'fichaTecn'])->name('fichaTecn');
 Route::get('file-export-fichaTecn', [FichaController::class, 'fileExportTecn'])->name('file-export-fichaTecn');
+Route::get('file-export-ReportTecn', [FichaController::class, 'fileExportReportTecn'])->name('file-export-ReportTecn');
 
 /* Espacializacion */
 Route::get('nivelEs', [ConsultaController::class,'nivelEs'])->name('nivelEs');
 Route::get('fichaEs', [ConsultaController::class,'fichaEs'])->name('fichaEs');
 Route::get('reporteEs', [ConsultaController::class,'reporteEs'])->name('reporteEs');
 Route::get('file-export-fichaEs', [FichaController::class, 'fileExportEs'])->name('file-export-fichaEs');
+Route::get('file-export-ReportES', [FichaController::class, 'fileExportReportES'])->name('file-export-ReportES');
 
 /* Evento */
 Route::get('nivelEvento', [ConsultaController::class,'nivelEvento'])->name('nivelEvento');
 Route::get('file-export-fichaEv', [FichaController::class, 'fileExportEv'])->name('file-export-fichaEv');
 Route::get('reporteEvento', [ConsultaController::class,'reporteEvento'])->name('reporteEvento');
 Route::get('fichaEvento', [ConsultaController::class,'fichaEvento'])->name('fichaEvento');
+Route::get('file-export-ReportEV', [FichaController::class, 'fileExportReportEV'])->name('file-export-ReportEV');
 
 /* Coordinadores */
 

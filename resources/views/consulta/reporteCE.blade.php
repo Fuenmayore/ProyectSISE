@@ -8,6 +8,12 @@
 
         <body>
             <div class="container mt-8 min-vh-100 py-4">
+
+    <div class="container mt-2 text-center ">
+        <h2 class="mb-4">
+            Curso Especial
+        </h2>
+    </div>
                 <div class="row">
                     <div class="col-xl-2 col-sm-6 mb-xl-0 mb-4">
                         <div class="card">
@@ -137,7 +143,7 @@
                 <div class="card my-4">
                     <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                         <div class="bg-gradient-warning shadow-primary border-radius-lg pt-4 pb-3">
-                            <h6 class="text-white text-capitalize ps-3">Reporte por CURSO ESPECIAL</h6>
+                            <h6 class="text-white text-capitalize ps-3">Reporte </h6>
 
 
                         </div>
@@ -151,9 +157,9 @@
                             </a>
 
                         </div>
-                        
+
                     </div>
-                    
+
                     <div class="container-fluid">
                         <div class="row justify-content-center">
                             <div class="row">

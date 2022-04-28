@@ -137,9 +137,11 @@
                           </div>
                     </li>
 
-                    <div class="sidenav-footer position-absolute w-100 bottom-0 ">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link  text-warning" id="navbarDropdown" class="nav-link dropdown-toggle"
+                    </ul>
+        </div>
+        <div class="sidenav-footer position-absolute w-100 bottom-0 ">
+                        
+                            <a class="nav-link btn text-warning" id="navbarDropdown" class="nav-link dropdown-toggle"
                                 href="{{ route('logout') }}" onclick="event.preventDefault();
                                        document.getElementById('logout-form').submit();" {{ __('Logout') }} role="button"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -158,7 +160,7 @@
                                     @csrf
                                 </form>
                             </div>
-                        </li>
+                        
                     </div>
 
         </aside>

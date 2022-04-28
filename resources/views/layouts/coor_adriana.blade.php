@@ -81,22 +81,21 @@
     <!-- End Navbar -->
 
     <body class="g-sidenav-show  bg-gray-200">
-        <aside
-            class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-white"
-            id="sidenav-main">
-            <div class="sidenav-header">
-                <i class="fas fa-times p-3 cursor-pointer text-dark opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
-                    aria-hidden="true" id="iconSidenav"></i>
-                <a class="navbar-brand m-0"  target="_blank">
-                    <img src="./assets/img/logoSena.png" class="navbar-brand-img h-100" alt="main_logo">
-                    <span class="ms-1 font-weight-bold text-warning">SISE</span>
-                </a>
-
-            </div>
-            <hr class="horizontal light mt-0 mb-2">
-            <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
-                <ul class="navbar-nav" id="navbar">
-                    <li class="nav-items">
+    <aside
+        class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-white"
+        id="sidenav-main">
+        <div class="sidenav-header">
+            <i class="fas fa-times p-3 cursor-pointer text-dark opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
+                aria-hidden="true" id="iconSidenav"></i>
+            <a class="navbar-brand m-0" target="_blank">
+                <img src="./assets/img/logoSena.png" class="navbar-brand-img h-100" alt="main_logo">
+                <span class="ms-1 font-weight-bold text-warning">SISE</span>
+            </a>
+        </div>
+        <hr class="horizontal light mt-0 mb-2">
+        <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
+            <ul class="navbar-nav" id="navbar">
+               <li class="nav-items">
                         <a class="nav-link text-dark active @yield('1') " href="{{ route('homeAdriana') }}">
                             <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
                                 <i class="material-icons opacity-10">home</i>
@@ -136,10 +135,11 @@
                             </div>
                           </div>
                     </li>
-
-                    <div class="sidenav-footer position-absolute w-100 bottom-0 ">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link  text-warning" id="navbarDropdown" class="nav-link dropdown-toggle"
+            </ul>
+        </div>
+        <div class="sidenav-footer position-absolute w-100 bottom-0 ">
+                        
+                            <a class="nav-link btn text-warning" id="navbarDropdown" class="nav-link dropdown-toggle"
                                 href="{{ route('logout') }}" onclick="event.preventDefault();
                                        document.getElementById('logout-form').submit();" {{ __('Logout') }} role="button"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -158,10 +158,10 @@
                                     @csrf
                                 </form>
                             </div>
-                        </li>
+                        
                     </div>
-
-        </aside>
+    </aside>
+   
 
        @yield('content')
 
